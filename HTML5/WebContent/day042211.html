@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<button onclick="pushBtn1()">버튼</button>
+	<button onclick="pushBtn2()">버튼</button>
+	<br/>
+	<button onclick="pushBtn3()">버튼</button>
+	<button onclick="pushBtn4()">버튼</button>
+	<script>
+		function wConsole() {
+			console.log("출력");
+		}
+		
+		let pb;	//변수를 밖에 써준다.
+		function pushBtn1() {
+			pb = setTimeout(wConsole, 2000);	
+			//두 번째 매개변수의 시간이 흐른 뒤 첫번째 매개변수의 함수가 실행된다.
+		}
+		
+		function pushBtn2() {
+			clearTimeout(pb);	
+			//setTimeout으로 설정된 것을 해제, 반드시 변수에 저장되어야만 clear 가능하다.
+		}
+		
+		let pb2;
+		function pushBtn3() {
+			pb2 = setInterval(function(){console.log("인터벌 출력")}, 1000);
+			// 간격을 두고 연속해서 실행된다.
+		}
+		
+		function pushBtn4() {
+			clearInterval(pb2);
+			// 인터벌이 클리어되어 더이상 실행되지 않는다.
+		}
+		
+		console.log(screen.availWidth);
+		console.log(screen.availHeight);
+	</script>
+</body>
+</html>

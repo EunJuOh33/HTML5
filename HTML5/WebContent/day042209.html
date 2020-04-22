@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		function car() {	//메소드
+			
+		}
+		
+		function Car() {	//첫 글자가 대문자면, 클래스
+			/* 필드 */
+			company = company,	//여기서는 '='사용. 
+			color = color,
+			model = model,
+			maxSpeed = 350,
+			speed = 0,
+			
+			/* 메소드 */
+			this.addSpeed = function(){		//'='를 사용하기 때문에 this.을 사용
+				this.speed += 10;		
+				cpmsole.log(this.speed);
+			},
+			this.subSpeed = function(){
+				this.speed -= 10;
+				console.log(this.speed);
+			},
+			this.moveSpeed = function(x) {
+				this.speed += x;
+				console.log(this.speed);
+			}
+		}
+		// 자바에서는 필드에 선언되어 있어야먄 this를 사용할 수 있었다.
+		// 여기서는 선언하지 않아도 그냥 사용한다.
+		
+		let myCar = new Car("기아자동차", "black", "k5");
+		console.log(myCar.company);
+	</script>
+</body>
+</html>

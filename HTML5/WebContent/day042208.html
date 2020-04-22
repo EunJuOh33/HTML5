@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<button onclick="myCar.addSpeed()">가속</button>
+	<button onclick="myCar.addSpeed()">감속</button>
+	<script>
+		let myCar = {	// [](대괄호)는 배열, {}(중괄호)는 클래스
+			
+			/* 필드 */
+			company : "현대자동차",	//키는 ""로 감싸도 되고 생략해되 된다.
+			color : "red",			//값은 문자열일 경우 반드시 ""로 감싸야하만 한다.
+			model : "그랜저",
+			maxSpeed : 350,
+			speed : 0,
+			
+			/* 메소드 */
+			addSpeed : function(){	//클래스의 메소드 정의
+				this.speed += 10;
+				cpmsole.log(this.speed);
+			},
+			subSpeed : function(){
+				this.speed -= 10;
+				console.log(this.speed);
+			},
+			moveSpeed : function(x) {
+				this.speed += x;
+				console.log(this.speed);
+			}
+		};
+		
+		console.log(myCar.company);	//현대자동차
+		console.log(myCar.color);	//red
+		console.log(myCar.speed);
+		myCar.moveSpeed(100);
+	</script>
+</body>
+</html>

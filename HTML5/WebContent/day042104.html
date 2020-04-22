@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>visibility: hidden</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+		}
+		#box1 {
+			display: none;
+			background: yellow;
+			visibility: hidden;
+			/* 기본값은 display: box; 
+				display: none;은 존재하지 않는 것처럼 만든다.
+				display: none;과 visibility: hidden;의 차이
+			*/
+		}
+		
+		#box2 {
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1"></div>
+	<div id="box2"></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>z-index</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			border: 5px solid red;
+			background: yellow;
+			text-align: center;
+			line-height: 200px;
+			font-size: 40px;
+			font-weight: 700;
+			position: absolute;
+		}
+		
+		#box1 {
+			z-index: -999;	
+			/* 음수도 사용가능. 
+			동위에 있는 태그만 z-index로 레이어처리 할 수 있다.
+			부모나 자식 태그는 불가능하다.
+			*/
+		}
+		
+		#box2 {
+			top: 100px;
+			left: 100px;
+			background: pink;
+			z-index: 1000;	
+			/* 1만 줘도 위로 올라오지만, 중간에 끼워넣을 수 있도록 큰 숫자를 사용한다. */
+		}
+		
+		#box3 {
+			top: 200px;
+			left: 200px;
+			background: #ccffff;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1">box1</div>
+	<div id="box2">box2</div>
+	<div id="box3">box3</div>
+</body>
+</html>

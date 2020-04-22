@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		let x = prompt("x의 값을 입력해 주세요.", "정수만 입력 가능합니다.");	// 두 번째 string은 내부에 입력되어 있는 value값이 된다.
+		let y = prompt("y의 값을 입력해 주세요.", "실수는 입력하지 마세요.");
+		/* prompt()를 사용하면 문자열이 입력된다. (예) 5 + 10 = 510
+			문자열을 숫자로 바꿔준다.
+		*/
+		x = parseInt(x);	//텍스트를 정수로만 변환
+		y = Number(y);		//(정수, 실수 가리지 않고) 텍스트를 숫자로 변환
+		let result = x + y;
+		console.log(result);
+		
+		//confirm()을 사용하면 true 또는 false의 값을 리턴한다.
+		let result2 = confirm("진행할까요?");
+		console.log(result2);
+		
+		//alert()는 경고창을 출력한다.
+		alert("경고창 사용");
+	</script>
+</body>
+</html>

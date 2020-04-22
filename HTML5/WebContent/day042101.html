@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DISPLAY 속성</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			list-style: none;
+		}
+		
+		p {
+			display: block;
+			background: yellow;
+		}
+		
+		span {
+			display: inline;
+			background: pink;
+			/* inline에서는 적용되지 않는다. */
+			/*
+			width: 500px;
+			height: 500px;
+			margin-top: 500px;
+			padding-botom: 500px;
+			*/
+		}
+		
+		strong, em {
+			background: #ffccff;
+		}
+		
+		body > div > div {
+			display: inline;
+			width: 200px;
+			height: 200px;
+			border: 2px solid red;
+			float: left;
+		}
+		
+		.section {
+			clear: both;
+		}
+		
+		.section ul {
+			width: 600px;
+			background: pink;
+			height: 50px;
+			margin: 0 auto;	/*중앙 정렬*/
+		}
+		
+		.section li {
+			float: left;
+			background: gray;
+			width: 200px;
+			height: 50px;
+		}
+		
+		.section > div {
+			width: 1200px;
+			background: yellow;
+			height: 50px;
+		}
+		
+		.section1 {
+			width: 1200px;
+			background: #ffccff;
+			height: 50px;
+		}
+		
+		.section1 > ul {
+			text-align: center;
+		}
+		
+		.section1 > ul > li {
+			display: inline-block;	/* 글자처럼 취급 */
+			background: skyblue;
+			width: 200px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		Lorem Ipsum is <span>simply dummy text</span> of the printing and typesetting industry. 
+		<strong>Lorem</strong> <em>Ipsum</em> has been the industry's standard dummy text ever since the 1500s, 
+		when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+		It has survived not only five centuries, but also the leap into electronic typesetting, 
+		remaining essentially unchanged. 
+		It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+		and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	</p>	
+	<div>
+		<div id="box1">box1</div>
+		<div id="box2">box2</div>
+	</div>
+	<div class="section">
+		<div>
+			<ul>
+				<li>한식</li>
+				<li>중식</li>
+				<li>일식</li>	
+			</ul>
+		</div>	
+	</div>
+	<div class="section1">
+		<ul>
+			<li>한식</li>
+			<li>중식</li>
+			<li>일식</li>	
+		</ul>
+	</div>
+</body>
+</html>

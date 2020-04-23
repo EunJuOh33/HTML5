@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		* {
+			margin: 0;
+			padding:0;
+			text-decoration: none;
+			list-style: none;
+		}
+		
+		#box {
+			width: 300px;
+			height: 300px;
+			background: orange;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<button>버튼1</button>
+	</div>
+	<div id="box"></div>
+	
+	<!-- jquery 연결 -->
+	<script src="js/jquery-3.5.0.min.js"></script>
+	<script>
+		$(function() {
+			let.toggle
+		});
+		
+		$(document).ready(function() {
+			$("button").click(function() {
+				toggleBtn++;	// toggle버튼을 1 증가시킨다.
+				if(toggleBtn%2 == 0) {
+					$("#box").show();	//짝수라면 박스를 보이게 한다.
+				} else {
+					$("#box").hide();	// 홀수라면 박스를 숨긴다.
+				}
+			});
+		});
+	</script>
+</body>
+</html>

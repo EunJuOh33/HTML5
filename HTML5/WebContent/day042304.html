@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li>css</li>
+		<li>html</li>
+		<li>java script</li>
+	</ul>
+	<script src="js/jquery-3.5.0.min.js"></script>
+	<script>
+		$(function() {
+			$("ul").append("<li>append</li>");	// append : ul 태그 내부의 제일 끝에 추가한다.
+			$("<li>appendTo</li>").appendTo("ul");	// apppendTo : 앞의 것을 뒤에 추가한다.
+			$("ul").prepend("<li>prepend</li>");	// prepend : ul 태그 내부의 제일 앞에 추가한다.
+			$("<li>prependTo<li>").prependTo("ul");
+			$("ul").before("<p>before</p>");	// ul태그 앞(바깥쪽)에 생긴다.
+			$("<p>insertBefore</p>").insertBfore("ul");
+			$("ul").after("<p>after</p>");	// ul태그 뒤(바깥쪽)에 생긴다.
+			$("<p>insertAfter</p>").insertAfter("ul");
+			$("li:eq(2)").appendTo("ul");
+			$("li:eq(2)").clone().prependTo("ul");
+			$("li:eq(3)").empty();	// 태그 내부의 값을 지운다.
+			$("li:eq(3)").remove();		
+		});
+	</script>
+</body>
+</html>

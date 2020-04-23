@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트 예제</title>
+	<style>
+		body {
+			margin: 20px;
+			padding: 20px;
+			line-height: 1;
+			font-size: 1em;
+			background: #555;
+			color: #000;
+		}
+		
+		li {
+		
+		}
+		
+		.title {
+			font-size: 1.5em;	//부모의 글자 크기 몇 배
+			font-weigth: 300;
+		}
+		
+		.container {
+			margin-top: 35px;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="title">basic :: jQuery basic study</h1>
+	<div class="container">
+		<ul id="tutorial">
+			<li class="html">HTML</li>
+			<li class="css">CSS</li>
+			<li class="css3">CSS3</li>
+			<li class="javascript">JavaScript</li>
+			<li class="jquery"><p>jQuery</p></li>
+			<li class="blank"></li>
+		</ul>
+		<p id="portfolil">portfolio</p>
+	</div>
+	
+	<!-- j Query Code -->
+	<script src="js/jquery-3.5.0.min.js"></script>
+	<script> 
+		$(function() {
+//			$(".html").scc("background", "red");	
+//			$(".css3 ~ li").css("background", "pink");
+//			$(".html + .css3").css("background", "yellow");	
+			$("ul").find("li").first().css("background", "#ececec");
+			$("ul").find("li").last().html("<em>Blank</em>").css("background", "#ececec");
+			$("ul").children().eq(2).css("background", "orange");
+			$("ul > li:first-child").css("font-weight", "900");
+			$("ul > li:nth-child(2)").css("color", "red");
+			$("ul > li")eq(2).css("color", "blue");
+			$("li").even().css("background", "green");
+			$("li").odd().css("background", "yellowgreen");
+			$("li:gt(3)").css("font-size", "40px");
+			$("p").parent("li").css("background", "orange").css("color", "white");
+			$("p").parent("li").css("background" : "orange", "color" : "white");
+			$(".css").next().next().next()("넥스트로 이동");
+			$(".css").prev().text("앞으로 이동");
+		});
+	</script>
+</body>
+</html>

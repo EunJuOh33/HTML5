@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트 예제</title>
+	<style>
+		body {
+			margin: 20px;
+			padding: 20px;
+			line-height: 1;
+			font-size: 1em;
+			background: #555;
+			color: #000;
+		}
+		
+		li {
+		
+		}
+		
+		.title {
+			font-size: 1.5em;	//부모의 글자 크기 몇 배
+			font-weigth: 300;
+		}
+		
+		.container {
+			margin-top: 35px;
+		}
+	</style>
+</head>
+<body>
+	<script src="http://code.jquery.com/jquery-3.3.1.min."></script>
+	<script> 
+		$(function() {
+			$(".html").scc("background", "red");	
+			$(".css3 ~ li").css("background", "pink");
+			$(".html + .css3").css("background", "yellow");
+		});
+	</script>
+	
+	
+</body>
+</html>

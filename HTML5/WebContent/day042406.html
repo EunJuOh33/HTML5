@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>애니메이션 효과</title>
+	<style>
+		.box {
+			width: 300px;
+			height: 300px;
+			background: lightgray;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<button>버튼</button>
+	</div>
+	<div class="box"></div>
+	<script src="js/jquery-3.5.0.min.js"></script>
+	<script>
+		$(function() {
+			$("button").click(function() {	//버튼을 클릭했을 때 동작한다.
+				$(".box").animate({"width":"500px", "height":"500px"}, 2000);	// 2초동안 width:500px, height:500px만큼 커진다.
+			});
+		});	
+	</script>
+</body>
+</html>

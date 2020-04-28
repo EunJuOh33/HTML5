@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>마우스 휠 이벤트</title>
+	<link rel="stylesheet" href="css/jquery005.css" />
+</head>
+<body>
+	<h2></h2><br/>
+	<h2></h2><br/>
+	<button>버튼</button>
+	
+	<script src="js/jquery-3.5.0.min.js"></script>
+	<script>
+		$(function() {
+			$("html, body").on("mousewheel", function(e) {
+				$("h2:first").text(e.originalEvent.wheelDelta);	//크롤, 익스플로러 등등
+			});
+			
+			$("html, body").on("DOMMouseScroll", function(e) {
+				$("h2:last").text(e.originalEvent.detail);	//파이어폭스에서 적용.
+															//사용자가 어떤 브라우저로 접속할지 모르니 둘 다 적어야 한다.
+			});
+			
+			$("button").bind("click mouseenter", function() {
+				console.log("click")	// 버튼을 클릭하면 콘솔창에 "click"이라고 나온다.
+			});
+			
+			$("html, body").on("DOMMouseScroll", function(e) {
+				if(e.originalEvent.wheelDelta == 120 || e.originalEvent.detail == -3) {	
+					//마우스휠을 내렸을 때 120이거나 originalEvent가 -3일 경우
+					console.log("wheel up");
+				} else if(e.originalEvent.wheelDelta == -120) {
+					console.log("wheel down");
+				}
+			});
+		});
+	</script>
+</body>
+</html>

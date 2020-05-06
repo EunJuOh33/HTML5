@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>display 속성</title>
+		<style>
+			a:link, a:visited {
+				color:black;
+				text-decoration: none;
+			}
+			
+			* {
+			 padding: 0;
+			 margin: 0;
+			}
+			
+			ul {
+				list-style: none;	/* 목록의 불릿을 없앤다. */
+			}
+			
+			li {
+				display: inline-block;	/* 항목 가로배치, 블록레벨 속성(너비, 높이, 마진 등 설정가능) */
+				border: 1px solid black;	/* 1px 검정색 실선 */
+				padding: 10px 20px;
+				margin: 10px;
+			}
+			
+			li:hover {	/* 커서를 올렸을 때 커서 모양 */
+				cursor: pointer;	/* 손가락 모양 */
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="#">메뉴1</a></li>
+				<li><a href="#">메뉴2</a></li>
+				<li><a href="#">메뉴3</a></li>
+				<li><a href="#">메뉴4</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>

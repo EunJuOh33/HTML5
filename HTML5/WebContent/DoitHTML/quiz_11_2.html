@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>멀티미디어 재생하기</title>
+	<style>
+		#container {
+       		width:600px;
+       		margin:10px auto;
+       		padding:20px;
+		}
+	</style>
+</head>
+<body>
+  <div id="container">
+    <h1>SUMMER BEACH</h1>
+	<video width="400px" height="220px" controls loop autoplay muted>	<!-- 컨트롤 막대, 무한반복, 자동재생, 소리끄기 -->
+	 	<source src="media/Beach.mp4" type="video/mp4" />
+	 	<source src="dedia/Beach.webm" type="video/webm" />
+	 	<!-- 어느 브라우저에서나 재생할 수 있도록 두 개 이상의 비디오 함께 삽입 -->
+	 </video> 
+  </div>
+</body>
+</html>

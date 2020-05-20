@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS3 트랜스폼과 트랜지션</title>
+	<style>	
+	.photo {	
+        margin-top:50px;	
+	    margin-left:100px;
+	}
+
+	.photo:hover {	/* 마우스를 올려놓을 때 트랜지션 진행 */
+		transform: scale(1.5);	/* 이미지 크기를 1.5배로 확대 */
+		-webkit-transform: scale(1.5);	/* 각 브라우저에 맞게 속성 이름 앞에 접두사를 붙인다. */
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+		
+		transform-origin: left top;	/* 변형 기준 왼쪽 위 모서리 */
+		-webkit-transform-origin: left top;	/* 각 브라우저에 맞게 속성 이름 앞에 접두사를 붙인다. */
+        -moz-transform-origin: left top;
+        -ms-transform-origin: left top;
+        -o-transform-origin: left top;
+        
+        transition: all 1s;	/* 트랜지션 대상 all, 진행시간 1초 */
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+		
+		box-shadow: 5px 5px 5px 3px black;	/* 변형된 이미지에 그림자 추가 */
+	}
+	</style>
+</head>
+<body>
+	<img src="../img/lamp.jpg" width="250" height="188" class="photo">	
+</body>
+</html>

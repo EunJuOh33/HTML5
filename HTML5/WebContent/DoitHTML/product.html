@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS3 애니메이션</title>
+  <style>
+    .prod-list {
+      list-style:none;
+      margin:0;
+      padding:0;
+     }
+      .prod-list li {
+        position: relative;
+        float: left;
+        padding: 0;
+        margin: 10px;
+        overflow: hidden;
+      }
+    .prod-list img {
+      margin:0;
+      padding:0;
+      float:left;
+      z-index:5;
+    }   
+    /* 상품 설명글(.caption)에 대한 스타일 정의 */
+    .prod-list .caption {
+    	position: absolute;	/* absolute를 사용하려면 부모 요소에 position: relative로 지정되어 있어야 한다. */
+    	top: 200px;	/* 부모요소(.prod-list)를 기준으로, 부모요소 아래로 200px 떨어진 위치에 설명글 표시 */
+    	width: 300px;
+    	height: 200px;
+    	padding-top: 20px;
+    	background: rgba(0, 0, 0, 0.6);
+    	opacity: 0;	/* 불투명도 0으로 지정해 화면에 보이지 않게 한다. */
+    	-moz-transition: all 0.2s ease-in-out;
+    	-o-transition: all 0.2s ease-in-out;
+    	-webkit-transition: all 0.2s ease-in-out;
+    	transition: all 0.2s ease-in-out;
+    	z-index: 10;	/* 설명 글은 이미지나 다른 요소보다 위에 표시되어야 하므로 z-index 값을 크게 지정(10이 아니더라도 큰 숫자면 된다.) */
+    }
+    /* 변형 효과 - 상품 위로 마우스 커서를 올려놓았을 때 .caption이 위로 이동한다. */
+    .prod-list li:hover .caption {
+    	opacity: 1;	/* 위로 이동하면서 설명글이 보여야 하므로 1로 수정 */
+    	-moz-transform: translateY(-200px);
+    	-ms-transform: translateY(-200px);
+    	-o-transform: translateY(-200px);
+    	-webkit-transform: translateY(-200px);
+    	transform: translateY(-200px);
+    }
+    /* .caption 요소에 있는 글자 스타일 수정 */
+    .prod-list .caption h1, .prod-list .caption p {
+    	color: #fff;
+    	text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>신상품 목록</h1>
+	<div id="container">
+		<ul class="prod-list">
+      <li>
+        <img src="../img/prod1.jpg">
+        <div class="caption">
+          <h1>상품 1</h1>
+          <p>상품 1 설명 텍스트</p>
+          <p>가격 : 12,345원</p>
+        </div>
+      </li>
+      <li>
+        <img src="../img/prod2.jpg">
+        <div class="caption">
+          <h1>상품 2</h1>
+          <p>상품 2 설명 텍스트</p>
+          <p>가격 : 12,345원</p>
+        </div>
+      </li>
+      <li>
+        <img src="../img/prod3.jpg">
+        <div class="caption">
+          <h1>상품 3</h1>
+          <p>상품 3 설명 텍스트</p>
+          <p>가격 : 12,345원</p>
+        </div>
+      </li>
+    </ul>
+	</div>
+</body>
+</html>

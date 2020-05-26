@@ -1,0 +1,80 @@
+* {	/* 기본설정 */
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background:rgb(9, 100, 160);	/* 파랑 */
+}
+
+#container {	/* 모든 요소를 담는 부모태그 */
+    width:320px;        
+    margin:50px auto;	/* 아래위 마진auto는 주지않음 */
+}
+ .card { /* 이미지와 글자를 감싸는 태그 */
+    position:relative;    
+    width:300px;
+    height:500px;
+    margin:20px 10px;
+    border:1px solid #0f0f0f33;
+    background-color:#ffffff;	/* 흰색 */    
+} 
+.words {
+    position:absolute;    
+    left:10px;  /* 텍스트 left 위치 */
+    top:300px;  /* 텍스트 top 위치 */
+    padding:10px;
+    text-align:center;   
+    width: 200px;
+}
+
+@media screen and (min-width:768px) and (max-width:1719px) {
+	/* @media 미디어쿼리 사용, 미디어유형: 컴퓨터스크린(스마트폰 스크린 포함)
+		브라우저 창의 최소 너비: 768px, 최대너비: 1719px 
+		창의 너비가 768px 이상, 1719px 이하일 때 카드 안에 이미지와 텍스트가 가로로 나열 */
+	#container {
+		width: 570px;	/* 카드너비 550에 좌우 남는공간 10씩 더하면 570 */
+		margin: 50px auto;	/* 위아래 마진 50px, 좌우 창 크기에 맞게 */
+	}
+	
+	.card {
+		position: relative;
+		width: 550px;	/* 선 빼면 548px, 이미지 너비 300px, 글자너비 200px, 남는 너비(흰색) 48px*/
+		height: 250px;
+		margin: 20px 10px;
+		border: 1px solid #0f0f0f33;
+		background-color: #ffffff;	/* 흰색 */
+	}
+	
+	.words {
+		position: absolute;
+		width: 200px;
+		left: 310px;	/* 왼쪽에서 310px 떨어짐 */
+		top: 50px;	/* 위에서 50px 떨어짐 */
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 1720px) {
+	/* 창의 너비가 1720px 이상일 때 카드가 가로로 배치 */
+	#container {
+		width: 1710px;	/* 카드 마진까지 합한 너비 570px x 3 = 1710 */
+		margin: 50px auto;
+	}
+	.card {
+		position: relative;
+		float: left;
+		width: 550px;
+		height: 250px;
+		margin: 10px;
+		border: 1px solid #0f0f0f33;
+		background-color: #ffffff;
+	}
+	.words {
+		position: absolute;
+		left: 310px;
+		top: 50px;
+		text-align: center;
+		width: 200px;
+	}
+}

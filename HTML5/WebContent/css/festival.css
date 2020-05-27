@@ -1,0 +1,127 @@
+* {	/* 기본 설정 */
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+/* clearFix는 앞, 뒤 요소에 아무 공간도 차지하지 않는 bolck 요소를 넣어서 
+	이름이 clearFix인 요소의 높이를 알 수 있게 해준다. 
+	자식 요소가 float: left가 되면 부모 요소는 높이를 가지지 못하기 때문 - 이것은 그냥 html의 오류 */
+.clearFix::before, clearFix::after {
+	display: block;	/* block 요소는 한 줄을 차지한다. */
+	content: "";
+}
+
+.clearFix::after {
+	clear: both;	/* float 속성 해제 */
+}
+
+header, section {
+	position: absolute;	/* 위치를 마음대로 정한다. 심지어 부모 요소 위에 겹쳐서 배치할 수도 있다. */
+	top: 0;	/* 위와 왼쪽에서 0만큼 떨어진다. = 위와 왼쪽으로 남는 공간 없이 붙인다. */
+	left: 0;
+	width: 1000px;
+}
+
+/* --------------------- header ----------------------- */
+header {
+	border: 2px solid black;
+}
+
+header > nav {
+	width: 1000px;
+	height: 30px;
+}
+
+header > nav > div#season1, div#season3 {
+	float: left;
+	width: 250px;	/* 1000px을 4로 나눈 값 */
+	height: 30px;
+	text-align: center;
+	line-height: 30px;	/* 폰트사이즈를 포함한 높이 */
+	background-color: gray;
+	color: white;
+}
+
+header > nav > div#season2, div#season4 {
+	float: left;
+	width: 250px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background-color: pink;
+	color: white;
+}
+
+header > div.logo {
+	width: 1000px;
+	height: 70px;
+	position: relative;
+}
+
+header > div.logo > h2 {
+	line-height: 70px;
+	padding-left: 50px;
+	position: absolute;	/* 위치를 내마음대로 정한다. 부모요소 위에 겹칠 수 있다. */
+}
+
+header > div.logo > img {
+	width: 1000px;
+	height: 70px;
+}
+
+header > div.logo > div.menu {
+	position: absolute;
+	width: 300px;
+	top: 35px;
+	left: 700px;
+}
+
+header > div.logo > div.menu > div {
+	float: left;
+	width: 100px;
+	font-weight: bold;	/* 글자 굵게 */
+}
+
+/* --------------------- section ----------------------- */
+section {
+	width: 1000px; 	/* border까지 합하면 1004가 될 것 */
+	height: 660px;	/* 카드의 높이 330px x 2 */
+	top: 104px;		/* header의 높이 + 선두께 4px */
+	border: 2px solid black;
+	border-top: 0px;	/* header의 밑 선과 겹침 */
+}
+
+section > div.card {
+	float: left;
+	width: 333px;
+	height: 330px;
+}
+
+section > div.card > img {
+	width: 333px;
+	height: 260px;	/* 글자 부분은 70px 둘 다 더하면 330px */
+}
+
+section > div.card > div.words {
+	width: 333px;
+	height: 70px;
+	text-align: center;	/* h3태그 가운데 정렬 */
+	line-height: 70px;
+	background-color: yellow;
+}
+
+section > div.card > div.words > p {
+	position: absolute;	/* 그림 위로 올라온다. */
+	margin-top: -25px;	/* h3태그와 겹치게 하려고 마진 마이너스 사용 */
+	width: 330px;
+	line-height: 20px;	/* p태그는 line-hegith만 먹힌다. */
+	color: gray;
+}
+
+section > div.card > h3 {
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 10px;
+}
